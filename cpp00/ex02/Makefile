@@ -1,13 +1,13 @@
-NAME			=	MyPhoneBook
+NAME			=	Account
 CC				=	clang++ -std=c++98
 RM				=	rm -rf
 FLAGS			=	-Wall -Wextra -Werror
-INC_PATH		=	./inc/
-INC_NAME		=	Contact.hpp PhoneBook.hpp
+INC_PATH		=	./
+INC_NAME		=	Account.hpp
 INC				=	$(addprefix $(INC_PATH), $(INC_NAME))
-SRCS_PATH		=	./src/
+SRCS_PATH		=	./
 OBJS_PATH		=	./objs/
-SRCS_NAME		=	Contact.cpp PhoneBook.cpp MyPhoneBook.cpp
+SRCS_NAME		=	Account.cpp tests.cpp
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_NAME))
 OBJS			=	$(addprefix $(OBJS_PATH), $(SRCS_NAME:.cpp=.o))
 
