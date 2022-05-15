@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 19:29:49 by hashly            #+#    #+#             */
-/*   Updated: 2022/04/23 22:10:17 by hashly           ###   ########.fr       */
+/*   Updated: 2022/05/15 19:30:46 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,43 +48,61 @@ Contact &Contact::operator=(const Contact& contact)
 }
 
 void	Contact::setFirstName(const std::string &FirstName)
-{	this->FirstName = FirstName;}
-
-void	Contact::setLastName(const std::string &LastName)
-{	this->LastName = LastName;}
-
-void	Contact::setNickName(const std::string &NickName)
-{	this->NickName = NickName;}
-
-void	Contact::setPhoneNumber(const std::string &PhoneNumber)
-{	this->PhoneNumber = PhoneNumber;}
-
-void	Contact::setDarkestSecret(const std::string &DarkestSecret)
-{	this->DarkestSecret = DarkestSecret;}
-
-const std::string &Contact::getFirstName()
-{	return (this->FirstName);}
-
-const std::string &Contact::getLastName()
-{	return (this->LastName);}
-
-const std::string &Contact::getNickname()
-{	return (this->NickName);}
-
-const std::string &Contact::getPhoneNumber()
-{	return (this->PhoneNumber);}
-
-const std::string &Contact::getDarkestSecret()
-{	return (this->DarkestSecret);}
-
-void	Contact::clear()
 {
-	this->FirstName.clear();
-	this->LastName.clear();
-	this->NickName.clear();
-	this->PhoneNumber.clear();
-	this->DarkestSecret.clear();
+	this->FirstName = FirstName;
+	this->isEmpty = false;
 }
 
-bool	Contact::contactEmpty()
+void	Contact::setLastName(const std::string &LastName)
+{
+	this->LastName = LastName;
+	this->isEmpty = false;
+}
+
+void	Contact::setNickName(const std::string &NickName)
+{
+	this->NickName = NickName;
+	this->isEmpty = false;
+}
+
+void	Contact::setPhoneNumber(const std::string &PhoneNumber)
+{
+	this->PhoneNumber = PhoneNumber;
+	this->isEmpty = false;
+}
+
+void	Contact::setDarkestSecret(const std::string &DarkestSecret)
+{
+	this->DarkestSecret = DarkestSecret;
+	this->isEmpty = false;
+}
+
+const std::string &Contact::getFirstName() const
+{	return (this->FirstName);}
+
+const std::string &Contact::getLastName() const
+{	return (this->LastName);}
+
+const std::string &Contact::getNickName() const
+{	return (this->NickName);}
+
+const std::string &Contact::getPhoneNumber() const
+{	return (this->PhoneNumber);}
+
+const std::string &Contact::getDarkestSecret() const
+{	return (this->DarkestSecret);}
+
+bool	Contact::contactIsEmpty() const
 {	return (this->isEmpty);}
+
+std::ostream	&operator<<(std::ostream &os, const Contact &rhs)
+{
+	if (rhs.contactIsEmpty())
+		return (os << "Contact empty" << std::endl);
+	os << "First name:\t" << rhs.getFirstName() << std::endl
+	<< "Last name:\t" << rhs.getLastName() << std::endl
+	<< "Nick name:\t" << rhs.getNickName() << std::endl
+	<< "Phone number:\t" << rhs.getPhoneNumber() << std::endl
+	<< "Darkest secret:\t" << rhs.getDarkestSecret() << std::endl;
+	return (os);
+}

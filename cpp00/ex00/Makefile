@@ -9,7 +9,7 @@ CC			=	clang++ -std=c++98
 
 $(OBJS_DIR)%.o :	$(SRCS_DIR)%.cpp
 	@mkdir -p $(OBJS_DIR)
-	@echo "Compiling: $<"
+	@echo "Compiling:\t$<"
 	@$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
@@ -18,11 +18,11 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	@echo "Cleaning: $(OBJS_DIR)"
+	@echo "Cleaning:\t$(OBJS_DIR)"
 	@rm -rf $(OBJS_DIR)
 
 fclean: clean
-	@echo "Cleaning: $(NAME)"
+	@echo "Cleaning:\t$(NAME)"
 	@rm -f $(NAME)
 
 re: fclean all

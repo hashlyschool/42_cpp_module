@@ -6,7 +6,7 @@
 /*   By: hashly <hashly@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 19:34:34 by hashly            #+#    #+#             */
-/*   Updated: 2022/04/23 22:13:19 by hashly           ###   ########.fr       */
+/*   Updated: 2022/05/15 19:15:30 by hashly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,15 @@ static int	add_contact(PhoneBook &PhoneBook)
 
 static int	search(PhoneBook &PhoneBook)
 {
-	PhoneBook.printBook();
+	int	index;
+
+	std::cout << PhoneBook << std::endl;
+	if (PhoneBook.bookIsEmpty() == false)
+	{
+		std::cout << "Please, enter index" << std::endl;
+		std::cin >> index;
+		std::cout << PhoneBook[index - 1];
+	}
 	return (0);
 }
 
