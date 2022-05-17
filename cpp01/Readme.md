@@ -17,7 +17,7 @@
 5. [Упражнение 02: HI THIS IS BRAIN](#Упражнение-02-HI-THIS-IS-BRAIN)
 6. [Упражнение 03: Unnecessary violence](#Упражнение-03-Unnecessary-violence)
 7. [Упражнение 04: Sed is for losers](#Упражнение-04-Sed-is-for-losers)
-8. [Упражнение 05: Harl 2.0](#Упражнение-05-Harl-2.0)
+8. [Упражнение 05: Harl 2.0](#Упражнение-05-Harl-2-0)
 9. [Упражнение 06: Harl filter](#Упражнение-06-Harl-filter)
 
 ## Глава I ##
@@ -204,7 +204,7 @@ Zombie* zombieHorde( int N, std::string name );
 
 ## Глава VII ##
 
-### Упражнение 04:  Sed is for losers ###
+### Упражнение 04: Sed is for losers ###
 
 Название программы  |  Sed is for losers
 :------------------:|:---------------
