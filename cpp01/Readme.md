@@ -15,6 +15,10 @@
 3. [Упражнение 00: BraiiiiiiinnnzzzZ](#Упражнение-00-BraiiiiiiinnnzzzZ)
 4. [Упражнение 01: Moar brainz!](#Упражнение-01-Moar-brainz!)
 5. [Упражнение 02: HI THIS IS BRAIN](#Упражнение-02-HI-THIS-IS-BRAIN)
+6. [Упражнение 03: Unnecessary violence](#Упражнение-00-Unnecessary-violence)
+7. [Упражнение 04: Sed is for losers](#Упражнение-01-Sed-is-for-losers)
+8. [Упражнение 05: Harl 2.0](#Упражнение-02-Harl-2.0)
+9. [Упражнение 06: Harl filter](#Упражнение-02-Harl-filter)
 
 ## Глава I ##
 
