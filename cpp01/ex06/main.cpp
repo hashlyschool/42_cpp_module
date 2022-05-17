@@ -46,7 +46,7 @@ int	main(int argc, char **argv){
 	// }
 	// std::cout << "--------Level DEBUG--------" << std::endl;
 	// {
-	// 	Harl.setLevel("ERROR");
+	// 	Harl.setLevel("DEBUG");
 	// 	Harl.complain("DEBUG");
 	// 	Harl.complain("INFO");
 	// 	Harl.complain("WARNING");

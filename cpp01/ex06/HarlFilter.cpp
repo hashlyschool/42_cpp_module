@@ -47,6 +47,7 @@ void	Harl::complain(std::string level)
 		res = level.compare(levelsArr[i]);
 		if (res == 0)
 		{
+			std::cout << "[ " << levelsArr[i] << " ]" << std::endl;
 			(this->*funcArr[i])();
 			return ;
 		}
