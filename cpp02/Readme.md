@@ -292,4 +292,31 @@ Should output something similar to:
 
 BSP расшифровывается как бинарное разделение пространства. Добро пожаловать. :)
 
-Вы можете пройти этот модуль, не выполняя упражнение 03
+	Вы можете пройти этот модуль, не выполняя упражнение 03
+
+Давайте начнем с создания `class Point` в `Orthodox Canonical Form`, который представляет 2D-точку:
+
+* Private members:
+	* Атрибут `Fixed const x`.
+	* Атрибут `Fixed const y`.
+	* Еще что-нибудь полезное.
+
+* Public members:
+	* A default `constructor` that initializes `x` and `y` to 0.
+	* A constructor that takes as parameters two constant floating-point numbers. It initializes x and y with those parameters.
+	* A copy constructor.
+	* A copy assignment operator overload.
+	* A destructor.
+	* Anything else useful.
+
+В заключение реализуйте следующую функцию в соответствующем файле:
+
+	`bool bsp( Point const a, Point const b, Point const c, Point const point);`
+
+* a, b, c: Вершины треугольника.
+* point: точка для проверки.
+* return:
+	* `True`, если точка находится внутри треугольника.
+	* `False` в противном случае. Таким образом, если точка является вершиной или ребром, она вернет False.
+
+Реализуйте и сдайте свои собственные тесты, чтобы убедиться, что ваш класс ведет себя так, как ожидалось.

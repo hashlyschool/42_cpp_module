@@ -3,11 +3,11 @@ CC				=	c++ -std=c++98
 RM				=	rm -rf
 FLAGS			=	-Wall -Wextra -Werror
 INC_PATH		=	./
-INC_NAME		=	Fixed.hpp
+INC_NAME		=	Fixed.hpp Point.hpp
 INC				=	$(addprefix $(INC_PATH), $(INC_NAME))
 SRCS_PATH		=	./
 OBJS_PATH		=	./objs/
-SRCS_NAME		=	main.cpp Fixed.cpp
+SRCS_NAME		=	main.cpp Fixed.cpp Point.cpp bsp.cpp
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_NAME))
 OBJS			=	$(addprefix $(OBJS_PATH), $(SRCS_NAME:.cpp=.o))
 

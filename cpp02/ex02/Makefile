@@ -11,7 +11,7 @@ SRCS_NAME		=	main.cpp Fixed.cpp
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_NAME))
 OBJS			=	$(addprefix $(OBJS_PATH), $(SRCS_NAME:.cpp=.o))
 
-OPTFLAGS		=
+OPTFLAGS		=	
 
 all: ${NAME}
 
