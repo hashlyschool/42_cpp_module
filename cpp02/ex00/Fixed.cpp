@@ -32,10 +32,10 @@ Fixed::~Fixed()
 
 Fixed &				Fixed::operator=( Fixed const & rhs )
 {
-	if (this != &rhs)
+	if (this == &rhs)
 		return (*this);
 	std::cout << "Copy assignment operator called" << std::endl;
-	setRawBits(rhs.getRawBits());
+	this->setRawBits(rhs.getRawBits());
 	return (*this);
 }
 

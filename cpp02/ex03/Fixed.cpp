@@ -26,7 +26,7 @@ Fixed::Fixed(float const n)
 {
 	int	a;
 
-	a = (int)roundf(n * (1 << this->div));
+	a = roundf(n * (1 << this->div));
 	// std::cout << "Float constructor called" << std::endl;
 	this->setRawBits(a);
 }

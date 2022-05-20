@@ -1,60 +1,54 @@
 #include "Point.hpp"
 
 // Constructors
-Point::Point()
+Point::Point(): _x(0), _y(0)
 {
-	_x = 0;
-	_y = 0;
-	std::cout << "\e[0;33mDefault Constructor called of Point\e[0m" << std::endl;
+	// std::cout << "\e[0;33mDefault Constructor called of Point\e[0m" << std::endl;
 }
 
-Point::Point(const Point &copy)
+Point::Point(const Point &copy): _x(copy._x), _y(copy._y)
 {
-	_x = copy.getX();
-	_y = copy.getY();
-	std::cout << "\e[0;33mCopy Constructor called of Point\e[0m" << std::endl;
+	// std::cout << "\e[0;33mCopy Constructor called of Point\e[0m" << std::endl;
 }
 
-Point::Point(const Fixed x, const Fixed y)
+Point::Point(const Fixed x, const Fixed y): _x(x), _y(y)
 {
-	_x = x;
-	_y = y;
-	std::cout << "\e[0;33mFields Constructor called of Point\e[0m" << std::endl;
+	// std::cout << "\e[0;33mFields Constructor called of Point\e[0m" << std::endl;
 }
 
 
 // Destructor
 Point::~Point()
 {
-	std::cout << "\e[0;31mDestructor called of Point\e[0m" << std::endl;
+	// std::cout << "\e[0;31mDestructor called of Point\e[0m" << std::endl;
 }
 
 
 // Operators
 Point & Point::operator=(const Point &assign)
 {
-	_x = assign.getX();
-	_y = assign.getY();
-	return *this;
+	if (this == &assign)
+		return (*this);
+	return (*this);
 }
 
+bool	Point::operator==(Point const &right) const
+{
+	if (this->getX() == right.getX())
+	{
+		if (this->getY() == right.getY())
+			return (true);
+	}
+	return (false);
+}
 
 // Getters / Setters
 const Fixed Point::getX() const
 {
 	return _x;
 }
-void Point::setX(const Fixed x)
-{
-	_x = x;
-}
 
 const Fixed Point::getY() const
 {
 	return _y;
 }
-void Point::setY(const Fixed y)
-{
-	_y = y;
-}
-
