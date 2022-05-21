@@ -1,19 +1,18 @@
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
+#include <iostream>
+
 
 int	main()
 {
 	{
-		FragTrap	frag("frag");
-		ScavTrap	scav("frag");
-	}
-	{
-		FragTrap	frag("frag");
+		DiamondTrap diamond("DIAMOND");
 
-		frag.attack("joe");
-		frag.beRepaired(100);
-		frag.highFivesGuys();
-		frag.takeDamage(200);
-		frag.highFivesGuys();
+		diamond.attack("tank");
+		diamond.beRepaired(80);
+		diamond.guardGate();
+		diamond.highFivesGuys();
+		diamond.takeDamage(170);
+		diamond.takeDamage(50);
+		diamond.whoAmI();
 	}
 }

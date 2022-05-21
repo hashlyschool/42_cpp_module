@@ -1,17 +1,17 @@
-NAME			=	FragTrap
+NAME			=	DiamondTrap
 CC				=	c++ -std=c++98
 RM				=	rm -rf
 FLAGS			=	-Wall -Wextra -Werror
 INC_PATH		=	./
-INC_NAME		=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+INC_NAME		=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 INC				=	$(addprefix $(INC_PATH), $(INC_NAME))
 SRCS_PATH		=	./
 OBJS_PATH		=	./objs/
-SRCS_NAME		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS_NAME		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_NAME))
 OBJS			=	$(addprefix $(OBJS_PATH), $(SRCS_NAME:.cpp=.o))
 
-OPTFLAGS		=
+OPTFLAGS		=	-Wshadow -Wno-shadow
 
 all: ${NAME}
 

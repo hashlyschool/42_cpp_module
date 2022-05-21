@@ -23,7 +23,7 @@ class FragTrap : public ClapTrap
 
 		// Methods
 
-		void attack(const std::string& target);
+		// void attack(const std::string& target);
 		void highFivesGuys(void);
 
 };

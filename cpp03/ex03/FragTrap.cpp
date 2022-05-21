@@ -11,6 +11,7 @@ FragTrap::FragTrap(std::string Name) : ClapTrap(Name)
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
+	*this = copy;
 	// ClapTrap(copy);
 	// this->setName(copy.getName());
 	// this->setHit(copy.getHit());

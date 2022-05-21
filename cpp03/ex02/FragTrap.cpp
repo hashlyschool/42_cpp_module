@@ -11,6 +11,7 @@ FragTrap::FragTrap(std::string Name) : ClapTrap(Name)
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
+	*this = copy;
 	// ClapTrap(copy);
 	// this->setName(copy.getName());
 	// this->setHit(copy.getHit());
@@ -41,16 +42,16 @@ FragTrap & FragTrap::operator=(const FragTrap &assign)
 
 // Methods
 
-void	FragTrap::attack(const std::string &target)
-{
-	if (this->getHit() > 0 && this->getEnergy() > 0)
-	{
-		this->setEnergy(this->getEnergy() - 1);
-		std::cout << "FragTrap " << this->getName()
-		<< " attack " << target
-		<< ", causing " << this->getDamage() << " points of damage\n";
-	}
-}
+// void	FragTrap::attack(const std::string &target)
+// {
+// 	if (this->getHit() > 0 && this->getEnergy() > 0)
+// 	{
+// 		this->setEnergy(this->getEnergy() - 1);
+// 		std::cout << "FragTrap " << this->getName()
+// 		<< " attack " << target
+// 		<< ", causing " << this->getDamage() << " points of damage\n";
+// 	}
+// }
 
 
 void	FragTrap::highFivesGuys()

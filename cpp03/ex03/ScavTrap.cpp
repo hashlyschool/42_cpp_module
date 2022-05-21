@@ -11,6 +11,7 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
+	*this = copy;
 	// ClapTrap(copy);
 	// this->setName(copy.getName());
 	// this->setHit(copy.getHit());
