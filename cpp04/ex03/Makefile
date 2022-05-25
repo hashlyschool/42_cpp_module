@@ -1,13 +1,15 @@
-NAME			=	Abstract
+NAME			=	Interface
 CC				=	c++ -std=c++98
 RM				=	rm -rf
 FLAGS			=	-Wall -Wextra -Werror
 INC_PATH		=	./
-INC_NAME		=	Animal.hpp Cat.hpp Dog.hpp Brain.hpp
+INC_NAME		=	AMateria.hpp Character.hpp Cure.hpp Ice.hpp \
+					ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 INC				=	$(addprefix $(INC_PATH), $(INC_NAME))
 SRCS_PATH		=	./
 OBJS_PATH		=	./objs/
-SRCS_NAME		=	main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+SRCS_NAME		=	main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp \
+					MateriaSource.cpp
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_NAME))
 OBJS			=	$(addprefix $(OBJS_PATH), $(SRCS_NAME:.cpp=.o))
 
