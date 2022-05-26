@@ -3,22 +3,15 @@
 // Constructors
 WrongAnimal::WrongAnimal()
 {
-	this->type = "WrongAnimal";
 	std::cout << "\e[0;33mDefault Constructor called of WrongAnimal\e[0m" << std::endl;
+	this->type = "WrongAnimal";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
-	*this = copy;
 	std::cout << "\e[0;33mCopy Constructor called of WrongAnimal\e[0m" << std::endl;
+	this->type = copy.type;
 }
-
-WrongAnimal::WrongAnimal(std::string type)
-{
-	this->type = type;
-	std::cout << "\e[0;33mFields Constructor called of WrongAnimal\e[0m" << std::endl;
-}
-
 
 // Destructor
 WrongAnimal::~WrongAnimal()
@@ -26,12 +19,14 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "\e[0;31mDestructor called of WrongAnimal\e[0m" << std::endl;
 }
 
-
 // Operators
 WrongAnimal & WrongAnimal::operator=(const WrongAnimal &assign)
 {
-	if (this != & assign)
-		this->setType(getType());
+	std::cout << "\e[0;32mOperator = called of WrongAnimal\e[0m" << std::endl;
+	if (this != &assign)
+	{
+		this->type =  assign.type;
+	}
 	return *this;
 }
 
@@ -45,10 +40,6 @@ void	WrongAnimal::makeSound() const
 // Getters / Setters
 std::string WrongAnimal::getType() const
 {
-	return this->type;
-}
-void WrongAnimal::setType(std::string type)
-{
-	this->type = type;
+	return (this->type);
 }
 

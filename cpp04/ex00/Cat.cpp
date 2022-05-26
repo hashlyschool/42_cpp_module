@@ -1,14 +1,16 @@
 #include "Cat.hpp"
 
 // Constructors
-Cat::Cat() : Animal("cat")
+Cat::Cat()
 {
 	std::cout << "\e[0;33mDefault Constructor called of Cat\e[0m" << std::endl;
+	this->type = "Cat";
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy) : Animal()
 {
 	std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
+	this->type = copy.getType();
 }
 
 // Destructor
@@ -24,12 +26,16 @@ Cat & Cat::operator=(const Cat &assign)
 	std::cout << "\e[0;32mOperator = called of Cat\e[0m" << std::endl;
 	if (this != &assign)
 	{
-		this->setType(assign.getType());
+		this->type = assign.getType();
 	}
 	return *this;
 }
 
 // Getters / Setters
+std::string Cat::getType() const
+{
+	return (this->type);
+}
 
 // Methods
 

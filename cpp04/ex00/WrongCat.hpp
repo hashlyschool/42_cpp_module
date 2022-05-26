@@ -1,8 +1,6 @@
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 
-# include <iostream>
-# include <string>
 # include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal
@@ -11,7 +9,6 @@ class WrongCat : public WrongAnimal
 		// Constructors
 		WrongCat();
 		WrongCat(const WrongCat &copy);
-		WrongCat(std::string type);
 
 		// Destructor
 		~WrongCat();
@@ -19,12 +16,14 @@ class WrongCat : public WrongAnimal
 		// Operators
 		WrongCat & operator=(const WrongCat &assign);
 
-		// // Getters / Setters
+		// Getters / Setters
+		std::string	getType() const;
 
 		//methods
-
 		void	makeSound() const;
 
+	private:
+		std::string type;
 };
 
 #endif

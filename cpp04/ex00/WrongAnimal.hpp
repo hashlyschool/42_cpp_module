@@ -10,7 +10,6 @@ class WrongAnimal
 		// Constructors
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal &copy);
-		WrongAnimal(std::string type);
 
 		// Destructor
 		virtual ~WrongAnimal();
@@ -18,19 +17,15 @@ class WrongAnimal
 		// Operators
 		WrongAnimal & operator=(const WrongAnimal &assign);
 
-
-		// Getters / Setters
-
-		std::string getType() const;
-		void setType(std::string type);
-
 		//methods
 
 		void	makeSound() const;
 
+		// Getters / Setters
+		std::string getType() const;
+
 	private:
 		std::string type;
-
 };
 
 #endif

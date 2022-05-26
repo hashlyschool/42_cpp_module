@@ -22,14 +22,10 @@ class Animal
 		virtual void	makeSound() const;
 
 		// Getters / Setters
-		std::string getType() const;
-		void setType(std::string type);
+		virtual	std::string getType() const;
 
 	private:
 		std::string type;
-
-	protected:
-		Animal(std::string type);
 
 };
 

@@ -1,8 +1,6 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include <iostream>
-# include <string>
 # include "Animal.hpp"
 
 class Dog : public Animal
@@ -19,11 +17,13 @@ class Dog : public Animal
 		Dog & operator=(const Dog &assign);
 
 		// Getters / Setters
+		std::string getType() const;
 
 		// Methods
-
 		void	makeSound() const;
 
+	private:
+		std::string type;
 };
 
 #endif

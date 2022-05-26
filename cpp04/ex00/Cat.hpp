@@ -1,8 +1,6 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include <iostream>
-# include <string>
 # include "Animal.hpp"
 
 class Cat : public Animal
@@ -19,10 +17,13 @@ class Cat : public Animal
 		Cat & operator=(const Cat &assign);
 
 		// Getters / Setters
+		std::string	getType() const;
 
 		// Methods
+		void		makeSound() const;
 
-		void	makeSound() const;
+	private:
+		std::string type;
 };
 
 #endif
