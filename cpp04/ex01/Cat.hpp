@@ -1,8 +1,6 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include <iostream>
-# include <string>
 # include "Animal.hpp"
 # include "Brain.hpp"
 
@@ -12,21 +10,25 @@ class Cat : public Animal
 		// Constructors
 		Cat();
 		Cat(const Cat &copy);
-		Cat(std::string type);
 
 		// Destructor
-		~Cat();
+		virtual ~Cat();
 
 		// Operators
 		Cat & operator=(const Cat &assign);
 
-		// // Getters / Setters
-		// std::string getType() const;
-		// void setType(std::string type);
+		// Getters / Setters
+		std::string	getType() const;
+		Brain		*getBrain() const;
+
+		// Methods
+		void	makeSound() const;
 
 	private:
-		Brain	*_brain;
+		std::string	type;
+		Brain		*brain;
 
 };
 
 #endif
+

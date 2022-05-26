@@ -3,7 +3,6 @@
 
 # include <iostream>
 # include <string>
-# define SIZE_BRAIN 100
 
 class Brain
 {
@@ -19,9 +18,10 @@ class Brain
 		Brain & operator=(const Brain &assign);
 
 		// Getters / Setters
+		std::string *getIdeas() const;
 
 	private:
-		std::string *_idea;
+		std::string *ideas;
 
 };
 

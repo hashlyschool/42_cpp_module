@@ -1,8 +1,6 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include <iostream>
-# include <string>
 # include "Animal.hpp"
 # include "Brain.hpp"
 
@@ -12,18 +10,23 @@ class Dog : public Animal
 		// Constructors
 		Dog();
 		Dog(const Dog &copy);
-		Dog(std::string type);
 
 		// Destructor
-		~Dog();
+		virtual ~Dog();
 
 		// Operators
 		Dog & operator=(const Dog &assign);
 
+		// Getters / Setters
+		std::string	getType() const;
+		Brain		*getBrain() const;
+
+		// Methods
 		void	makeSound() const;
 
 	private:
-		Brain	*_brain;
+		std::string	type;
+		Brain		*brain;
 
 };
 

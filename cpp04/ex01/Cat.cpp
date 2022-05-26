@@ -1,53 +1,54 @@
 #include "Cat.hpp"
 
 // Constructors
-Cat::Cat() : Animal("Cat")
+Cat::Cat()
 {
-	this->_brain = new Brain;
+	this->type = "Cat";
+	this->brain = new Brain;
 	std::cout << "\e[0;33mDefault Constructor called of Cat\e[0m" << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy) : Animal()
 {
-	*this = copy;
+	this->type = copy.type;
+	this->brain = new Brain(*(copy.getBrain()));
 	std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
 }
-
-Cat::Cat(std::string type) : Animal(type)
-{
-	std::cout << "\e[0;33mFields Constructor called of Cat\e[0m" << std::endl;
-}
-
 
 // Destructor
 Cat::~Cat()
 {
-	delete this->_brain;
 	std::cout << "\e[0;31mDestructor called of Cat\e[0m" << std::endl;
+	delete this->brain;
 }
-
 
 // Operators
-Cat & Cat::operator=(const Cat &assign)
+Cat	&Cat::operator=(const Cat &assign)
 {
+	std::cout << "\e[0;32mOperator = called of Cat\e[0m" << std::endl;
 	if (this != &assign)
 	{
-		// type = rhs.type;
-	// return (*this);
-		_brain = new Brain(*assign._brain);
-		this->setType(assign.getType());
+		this->type = assign.type;
+		if (this->brain)
+			delete (this->brain);
+		this->brain = new Brain(*assign.brain);
 	}
-	return *this;
+	return (*this);
 }
 
-
 // Getters / Setters
-// std::string Cat::getType() const
-// {
-// 	return _type;
-// }
-// void Cat::setType(std::string type)
-// {
-// 	_type = type;
-// }
+std::string Cat::getType() const
+{
+	return (this->type);
+}
 
+Brain *Cat::getBrain() const
+{
+	return (this->brain);
+}
+
+// Methods
+void Cat::makeSound() const
+{
+	std::cout << "My type cat" << std::endl;
+}

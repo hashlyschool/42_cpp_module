@@ -9,17 +9,9 @@ Animal::Animal()
 
 Animal::Animal(const Animal &copy)
 {
-	// this->type = copy.getType();
-	*this = copy;
+	this->type = copy.type;
 	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
 }
-
-Animal::Animal(std::string type)
-{
-	this->type = type;
-	std::cout << "\e[0;33mFields Constructor called of Animal\e[0m" << std::endl;
-}
-
 
 // Destructor
 Animal::~Animal()
@@ -27,12 +19,14 @@ Animal::~Animal()
 	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
 }
 
-
 // Operators
 Animal & Animal::operator=(const Animal &assign)
 {
+	std::cout << "\e[0;32mOperator = called of Animal\e[0m" << std::endl;
 	if (this != &assign)
-		this->type = assign.getType();
+	{
+		this->type =  assign.type;
+	}
 	return *this;
 }
 
@@ -40,16 +34,12 @@ Animal & Animal::operator=(const Animal &assign)
 
 void	Animal::makeSound() const
 {
-	std::cout << "My type " << this->getType() << std::endl;
+	std::cout << "My type animal" << std::endl;
 }
 
 // Getters / Setters
 std::string Animal::getType() const
 {
-	return this->type;
-}
-void Animal::setType(std::string type)
-{
-	this->type = type;
+	return (this->type);
 }
 

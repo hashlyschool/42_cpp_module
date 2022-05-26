@@ -10,7 +10,6 @@ class Animal
 		// Constructors
 		Animal();
 		Animal(const Animal &copy);
-		Animal(std::string type);
 
 		// Destructor
 		virtual ~Animal();
@@ -20,19 +19,13 @@ class Animal
 
 		//methods
 
-		void	makeSound() const;
+		virtual void	makeSound() const;
 
 		// Getters / Setters
-
-		std::string getType() const;
-		void setType(std::string type);
+		virtual	std::string getType() const;
 
 	private:
 		std::string type;
-
-	protected:
-
-
 
 };
 
