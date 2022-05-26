@@ -19,12 +19,11 @@ class Cat : public Animal
 		// Operators
 		Cat & operator=(const Cat &assign);
 
-		// // Getters / Setters
-		// std::string getType() const;
-		// void setType(std::string type);
+		// Getters / Setters
 
-	// private:
-	// 	std::string _type;
+		// Methods
+
+		virtual void	makeSound() const;
 
 };
 

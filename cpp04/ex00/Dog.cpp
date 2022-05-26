@@ -36,12 +36,10 @@ Dog & Dog::operator=(const Dog &assign)
 
 
 // Getters / Setters
-// std::string Cat::getType() const
-// {
-// 	return _type;
-// }
-// void Cat::setType(std::string type)
-// {
-// 	_type = type;
-// }
 
+// Methods
+
+void	Dog::makeSound() const
+{
+	std::cout << "My type dog" << std::endl;
+}

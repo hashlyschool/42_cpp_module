@@ -18,19 +18,18 @@ class WrongAnimal
 		// Operators
 		WrongAnimal & operator=(const WrongAnimal &assign);
 
-		//methods
-
-		void	makeSound() const;
 
 		// Getters / Setters
 
 		std::string getType() const;
 		void setType(std::string type);
 
+		//methods
+
+		void	makeSound() const;
+
 	private:
 		std::string type;
-
-	protected:
 
 };
 

@@ -36,12 +36,10 @@ WrongCat & WrongCat::operator=(const WrongCat &assign)
 
 
 // Getters / Setters
-// std::string Cat::getType() const
-// {
-// 	return _type;
-// }
-// void Cat::setType(std::string type)
-// {
-// 	_type = type;
-// }
 
+// Methods
+
+void	WrongCat::makeSound() const
+{
+	std::cout << "My type WrongCat" << std::endl;
+}

@@ -39,7 +39,7 @@ WrongAnimal & WrongAnimal::operator=(const WrongAnimal &assign)
 
 void	WrongAnimal::makeSound() const
 {
-	std::cout << "My type " << "WrongAnimal" << std::endl;
+	std::cout << "My type WrongAnimal" << std::endl;
 }
 
 // Getters / Setters

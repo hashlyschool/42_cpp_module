@@ -20,11 +20,10 @@ class WrongCat : public WrongAnimal
 		WrongCat & operator=(const WrongCat &assign);
 
 		// // Getters / Setters
-		// std::string getType() const;
-		// void setType(std::string type);
 
-	// private:
-	// 	std::string _type;
+		//methods
+
+		void	makeSound() const;
 
 };
 

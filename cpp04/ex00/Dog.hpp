@@ -20,12 +20,10 @@ class Dog : public Animal
 		Dog & operator=(const Dog &assign);
 
 		// // Getters / Setters
-		// std::string getType() const;
-		// void setType(std::string type);
 
-	// private:
-	// 	std::string _type;
+		// Methods
 
+		virtual void	makeSound() const;
 };
 
 #endif

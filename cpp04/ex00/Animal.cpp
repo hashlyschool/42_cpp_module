@@ -38,7 +38,7 @@ Animal & Animal::operator=(const Animal &assign)
 
 void	Animal::makeSound() const
 {
-	std::cout << "My type " << this->getType() << std::endl;
+	std::cout << "My type animal" << std::endl;
 }
 
 // Getters / Setters

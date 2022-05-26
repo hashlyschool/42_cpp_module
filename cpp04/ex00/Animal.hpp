@@ -20,19 +20,14 @@ class Animal
 
 		//methods
 
-		void	makeSound() const;
+		virtual void	makeSound() const;
 
 		// Getters / Setters
-
 		std::string getType() const;
 		void setType(std::string type);
 
 	private:
 		std::string type;
-
-	protected:
-
-
 
 };
 
