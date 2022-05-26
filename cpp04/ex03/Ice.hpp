@@ -13,7 +13,7 @@ class Ice : public AMateria
 		Ice(const Ice &copy);
 
 		// Destructor
-		~Ice();
+		virtual ~Ice();
 
 		// Operators
 		Ice & operator=(const Ice &assign);

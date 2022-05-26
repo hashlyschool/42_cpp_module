@@ -6,6 +6,13 @@
 // default test
 int main()
 {
+	// Character test("test");
+	// {
+	// 	Character temp = test;
+	// 	std::cout << temp.getName() << std::endl;
+	// }
+	// std::cout << test.getName() << std::endl;
+
 	IMateriaSource* src = new MateriaSource();
 
 	src->learnMateria(new Ice());

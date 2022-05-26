@@ -13,7 +13,7 @@ class Cure : public AMateria
 		Cure(const Cure &copy);
 
 		// Destructor
-		~Cure();
+		virtual ~Cure();
 
 		// Operators
 		Cure & operator=(const Cure &assign);
