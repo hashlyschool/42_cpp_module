@@ -11,7 +11,6 @@ class Cat : public Animal
 		// Constructors
 		Cat();
 		Cat(const Cat &copy);
-		Cat(std::string type);
 
 		// Destructor
 		~Cat();
@@ -23,8 +22,7 @@ class Cat : public Animal
 
 		// Methods
 
-		virtual void	makeSound() const;
-
+		void	makeSound() const;
 };
 
 #endif

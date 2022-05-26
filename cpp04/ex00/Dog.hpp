@@ -11,7 +11,6 @@ class Dog : public Animal
 		// Constructors
 		Dog();
 		Dog(const Dog &copy);
-		Dog(std::string type);
 
 		// Destructor
 		~Dog();
@@ -19,11 +18,12 @@ class Dog : public Animal
 		// Operators
 		Dog & operator=(const Dog &assign);
 
-		// // Getters / Setters
+		// Getters / Setters
 
 		// Methods
 
-		virtual void	makeSound() const;
+		void	makeSound() const;
+
 };
 
 #endif

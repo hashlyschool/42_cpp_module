@@ -10,7 +10,6 @@ class Animal
 		// Constructors
 		Animal();
 		Animal(const Animal &copy);
-		Animal(std::string type);
 
 		// Destructor
 		virtual ~Animal();
@@ -28,6 +27,9 @@ class Animal
 
 	private:
 		std::string type;
+
+	protected:
+		Animal(std::string type);
 
 };
 

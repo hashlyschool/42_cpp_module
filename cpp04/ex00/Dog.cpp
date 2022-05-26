@@ -1,7 +1,7 @@
 #include "Dog.hpp"
 
 // Constructors
-Dog::Dog() : Animal("Dog")
+Dog::Dog() : Animal("dog")
 {
 	std::cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << std::endl;
 }
@@ -10,12 +10,6 @@ Dog::Dog(const Dog &copy) : Animal(copy)
 {
 	std::cout << "\e[0;33mCopy Constructor called of Dog\e[0m" << std::endl;
 }
-
-Dog::Dog(std::string type) : Animal(type)
-{
-	std::cout << "\e[0;33mFields Constructor called of Dog\e[0m" << std::endl;
-}
-
 
 // Destructor
 Dog::~Dog()
@@ -27,6 +21,7 @@ Dog::~Dog()
 // Operators
 Dog & Dog::operator=(const Dog &assign)
 {
+	std::cout << "\e[0;32mOperator = called of Dog\e[0m" << std::endl;
 	if (this != &assign)
 	{
 		this->setType(assign.getType());

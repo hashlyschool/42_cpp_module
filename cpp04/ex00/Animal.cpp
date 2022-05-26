@@ -9,7 +9,7 @@ Animal::Animal()
 
 Animal::Animal(const Animal &copy)
 {
-	this->type = copy.getType();
+	this->type = copy.type;
 	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
 }
 
@@ -30,7 +30,11 @@ Animal::~Animal()
 // Operators
 Animal & Animal::operator=(const Animal &assign)
 {
-	this->type = assign.getType();
+	std::cout << "\e[0;32mOperator = called of Animal\e[0m" << std::endl;
+	if (this != &assign)
+	{
+		this->setType(assign.getType());
+	}
 	return *this;
 }
 

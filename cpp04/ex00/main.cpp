@@ -11,13 +11,15 @@ int	main()
 		Dog		dog;
 		Animal	temp = cat;
 
-		animal.makeSound();
-		cat.makeSound();
-		dog.makeSound();
+		animal.makeSound(); //animal
+		cat.makeSound(); //cat
+		dog.makeSound(); //dog
 		// cat = dog; //error
-		temp.makeSound();
-		temp = dog;
-		temp.makeSound();
+		temp.makeSound(); //animal
+		std::cout << animal.getType() << " " << std::endl; //animal
+		std::cout << cat.getType() << " " << std::endl; //cat
+		std::cout << dog.getType() << " " << std::endl; //dog
+		std::cout << temp.getType() << " " << std::endl; //cat
 	}
 	std::cout << "-------------" << std::endl;
 	{
@@ -40,7 +42,7 @@ int	main()
 		const WrongCat* j = new WrongCat();
 		const WrongAnimal* meta = new WrongAnimal();
 		const WrongAnimal* k = new WrongCat();
-		i->makeSound(); //will output the cat sound!
+		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
 		k->makeSound();
