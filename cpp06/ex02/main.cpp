@@ -7,7 +7,6 @@
 // For randomness
 #include <cstdlib>
 #include <ctime>
-#include <typeinfo>
 
 static void ft_msg(std::string msg)
 {
@@ -66,24 +65,24 @@ void identify(Base& p)
 		std::cout << "A\n";
 		return ;
 	}
-	catch (std::bad_cast &bc) {
-		//std::cout << "Definetely not A\n";
+	catch (std::exception &bc) {
+		std::cout << "Definetely not A\n";
 	}
 	try {
 		(void)dynamic_cast<B &>(p);
 		std::cout << "B\n";
 		return ;
 	}
-	catch (std::bad_cast &bc) {
-		//std::cout << "Definetely not B\n";
+	catch (std::exception &bc) {
+		std::cout << "Definetely not B\n";
 	}
 	try {
 		(void)dynamic_cast<C &>(p);
 		std::cout << "C\n";
 		return ;
 	}
-	catch (std::bad_cast &bc) {
-		//std::cout << "Definetely not C\n";
+	catch (std::exception &bc) {
+		std::cout << "Definetely not C\n";
 	}
 	std::cout << "Unknown type\n";
 }
