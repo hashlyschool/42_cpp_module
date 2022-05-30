@@ -7,6 +7,11 @@
 template< typename T>
 void iter(T *array, int array_length, void (*f)(T const &ref))
 {
+	if (!f)
+	{
+		std::cout << "f = NULL" << std::endl;
+		return ;
+	}
 	for(int i = 0; i < array_length; i++)
 		f(array[i]);
 }

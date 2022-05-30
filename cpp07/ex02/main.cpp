@@ -1,25 +1,34 @@
 #include "Array.hpp"
 
+// TEST
+template< typename T>
+void	display(T &t, unsigned int len)
+{
+	std::cout << "ref array = \t" << &t << "\t len array = " << len << "\n";
+	for (unsigned int i = 0; i < len; i++)
+		std::cout << "t[" << i << "] = \t" << t[i] << "\t| ref = \t" << &(t[i]) << "\n";
+	std::cout << std::endl;
+}
+
 int	main()
 {
-	try{
 		Array<int> monPotitArray;
 		Array<int> BigArray(5);
 
-		std::cout << "Number of elements in the first array : " << monPotitArray.size() << std::endl;
-		std::cout << "Number of elements in the second array : " << BigArray.size() << std::endl;
-
+		display(monPotitArray, monPotitArray.size());
+		display(BigArray, BigArray.size());
 		BigArray[0] = 0;
 		BigArray[1] = 15;
 		BigArray[2] = 24;
 		BigArray[3] = 42;
 		BigArray[4] = 1;
+		display(BigArray, BigArray.size());
 
 		Array<int> copy(BigArray);
+		display(copy, copy.size());
 
-		std::cout << "Number of elements in the copy : " << copy.size() << std::endl;
-		std::cout << "copy[2] = " << copy[2] << std::endl;
-
+	try
+	{
 		monPotitArray[0] = 1;
 	}
 	catch (std::exception & e){
